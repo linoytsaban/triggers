@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triggered</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Background image will be set via GitHub when uploaded */
+            /* The placeholder will be replaced with actual image */
+            background-image: url('/api/placeholder/1080/1080');
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            margin: 100vh auto 40px;
+            background-color: rgba(0, 0, 0, 0.85);
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* First section is full viewport height to showcase the background image */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 14px;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-20px) translateX(-50%);}
+            60% {transform: translateY(-10px) translateX(-50%);}
+        }
+        
+        /* Add subtle hover effect to text to represent "triggering" */
+        p:hover {
+            color: #f0f0f0;
+            text-shadow: 0 0 8px rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="scroll-indicator">SCROLL DOWN</div>
+    </div>
+    <div class="container">
+        <h1>"triggered"</h1>
+        
+        <p>"triggered" explores the profound parallel between trauma's invisible rewiring of human perception and selective modifications of artificial neural networks. This work examines how traumatic experiences fundamentally alter our processing of sensory input—where ordinary stimuli like locations, smells, or sounds become powerful triggers that activate overwhelming emotional and physiological responses.</p>
+        
+        <p>Just as trauma creates these heightened associative pathways in the human mind—where certain sensory channels become hypersensitive while others may become muted—this artwork intervenes in the attention mechanisms of CLIP image encoder to simulate this perceptual rewiring. By selectively amplifying and silencing specific attention heads within the neural network, the visual output manifests the invisible yet profound alteration of perception that trauma survivors experience.</p>
+        
+        <p>The resulting imagery invites viewers to contemplate how trauma fundamentally changes our relationship with the world around us, creating invisible but powerful filters through which all subsequent experience must pass. Through this computational analogy, "triggered" offers a unique visualization of trauma's enduring impact—revealing how certain channels of perception become permanently heightened while others fade into silence, fundamentally altering our experience of reality without leaving visible traces.</p>
+    </div>
+</body>
+</html>
