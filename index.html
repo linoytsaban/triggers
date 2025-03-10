@@ -22,8 +22,38 @@
             background-repeat: no-repeat;
             background-size: cover;
             /* Background image will be set via GitHub when uploaded */
-            /* The placeholder will be replaced with actual image */
             background-image: url('grid_portraits.png');
+        }
+        
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                /* Adjust background size for mobile */
+                background-size: contain;
+                /* Ensure the image appears at the top on mobile */
+                background-position: top center;
+            }
+            
+            /* Make hero section smaller on mobile */
+            .hero {
+                height: 100vw; /* Use viewport width to maintain aspect ratio */
+                min-height: 50vh; /* Ensure minimum height */
+            }
+            
+            /* Adjust container padding for mobile */
+            .container {
+                padding: 20px;
+                margin-top: 50vh; /* Adjust starting point */
+            }
+            
+            /* Adjust text size for mobile */
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
         }
         
         .container {
@@ -88,6 +118,14 @@
             text-shadow: 0 0 8px rgba(255,255,255,0.5);
             transition: all 0.3s ease;
         }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +160,7 @@
         <p>The grid of portraits displayed in this work demonstrates this process, with each image being generated through the amplification or silencing of different groups of attention heads within CLIP's vision transformer. Text prompts and face conditioning were maintained constant across all generations, with the manipulated CLIP embeddings serving as the sole variable—thus effectively visualizing how selective attention modifications parallel the perceptual alterations experienced in traumatic processing.</p>
 
         <div style="text-align: center; margin: 40px 0;">
-            <img src="example.png" alt="attention modification example" style="width: 75%; height: auto;" />
+            <img src="example.png" alt="attention modification example" style="max-width: 100%; height: auto;" />
         </div>
     </div>
 </body>
